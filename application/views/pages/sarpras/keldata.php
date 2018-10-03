@@ -100,7 +100,9 @@
                   <td><?= $r->luas_area; ?></td>
                   <td><?= $r->nomordsi; ?></td>
                   <td><?= $r->penanggung_jawab; ?></td>
-                  <td> <a href="#form" data-toggle="modal" class="btn btn-primary">Edit</a><a href="#form" data-toggle="modal" class="btn btn-danger">Delete</a></td>
+                  <td> <a href="#form" data-toggle="modal" class="btn btn-primary" onclick="submit('$r->id')">Edit</a>
+                       <a href="#form" data-toggle="modal" class="btn btn-danger">Delete</a>
+                  </td>
                   <td><?= $r->jml_sdm; ?></td>
                   <td><?= $r->wktjagaopl; ?></td>
                   <td><?= $r->perangkat; ?></td>

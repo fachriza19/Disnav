@@ -55,7 +55,12 @@ if (! defined('BASEPATH') ) exit('No direct script access allowed');
             $this->load->view('templates/footer');
           }
 
-
+          function detail()
+          {
+            $this->load->view('templates/header');
+            $this->load->view('pages/sarpras/detail');
+            $this->load->view('templates/footer');
+          }
 
 
 

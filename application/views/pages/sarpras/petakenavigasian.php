@@ -76,7 +76,7 @@
                 '</div>'+
                 '<h5 id="firstHeading" align="center">'+ office[1] + '</h5>'+
                 '<div id="bodyContent">'+
-                '<a href=detail.php?id='+office[0]+'>Info Detail</a>'+
+                '<a href=detail/?id='+office[0]+'>Info Detail</a>'+
                 '</div>'+
                 '</div>';
 

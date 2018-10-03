@@ -173,6 +173,12 @@ if (! defined('BASEPATH') ) exit('No direct script access allowed');
         echo json_encode($data);
       }
 
+      function getdata_id()
+      {
+        $data['results'] = $this->m_sarpras->ambildata()->result_array();
+        echo json_encode($data);
+      }
+
       // function ambildata()
       // {
       //   $dataTempat = $this->m->get_all_data();

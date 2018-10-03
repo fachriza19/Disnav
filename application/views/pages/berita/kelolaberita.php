@@ -1,6 +1,6 @@
 <div class="page-wrapper">
 	<div class="container-fluid">
-		
+
 		<div class="row page-titles">
 			<div class="col-lg-12 align-self-center">
 				<h3 class="text-themecolor">Berita</h3>
@@ -50,8 +50,8 @@
 												<td><?php echo $judul;?> </td>
 												<!-- <td><?php echo $isi;?> </td> -->
 												<td width="400px"><img src="<?php echo base_url('assets/images/Upload/'.$image) ?>" class="img-fluid img-thumbnail col-sm-5"></td>
-												<td><a class="btn btn-xs btn-info" href="<?php echo base_url('kelolaberita/updateberita/'.$id) ?>"> Edit</a> 
-													<a class="btn btn-xs btn-info" href="<?php echo base_url('kelolaberita/hapusberita/'.$id) ?>" onclick="return confirm('Data Akan Dihapus');">Hapus</a>
+												<td><a class="btn btn-xs btn-info" href="<?php echo base_url('adminmenu/updateberita/'.$id) ?>"> Edit</a>
+													<a class="btn btn-xs btn-info" href="<?php echo base_url('adminmenu/hapusberita/'.$id) ?>" onclick="return confirm('Data Akan Dihapus');">Hapus</a>
 												</td>
 											</tr>
 										<?php endforeach;?>
