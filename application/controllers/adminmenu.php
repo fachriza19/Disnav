@@ -46,8 +46,6 @@ if (! defined('BASEPATH') ) exit('No direct script access allowed');
                 }else{
                    redirect('adminmenu/kelolaberita');
                      }
-                }else{
-                   redirect('adminmenu/kelolaberita');
                 }
           }
 
@@ -55,14 +53,6 @@ if (! defined('BASEPATH') ) exit('No direct script access allowed');
             $x['data']=$this->m_berita->get_all_berita();
             $this->load->view('templates/header');
             $this->load->view('pages/berita/list',$x);
-            $this->load->view('templates/footer');
-          }
-
-          function tampilanberita(){
-            $kode=$this->uri->segment(3);
-            $x['data']=$this->m_berita->get_berita_by_kode($kode);
-            $this->load->view('templates/header');
-            $this->load->view('pages/berita/tampilanberita',$x);
             $this->load->view('templates/footer');
           }
           function cari() {
@@ -150,7 +140,7 @@ if (! defined('BASEPATH') ) exit('No direct script access allowed');
             $del = $this->m_kelolaberita->hapusberita($berita_id);
             if ($del>0) {
                   $this->session->set_flashdata('success', 'true');
-                  redirect('kelolaberita');
+                  redirect('adminmenu/kelolaberita');
             }
       }
 
@@ -268,9 +258,19 @@ if (! defined('BASEPATH') ) exit('No direct script access allowed');
 
       }
 
+      function editdata($data_id)
+      {
+        $x[dataid]=$this->M_sarpras->v_editdata($data_id);
+      }
 
+      function ambilId()
+      {
+        $id=$this->input->post('id');
+        $where=array('id'=>$id);
+        $datatmpt = $this->M_sarpras->ambilId('data',$where)->result();
 
-
+        echo json_encode($datatmpt);
+      }
 
 
 

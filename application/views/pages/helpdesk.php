@@ -29,13 +29,13 @@
               <div class="form-group row">
                 <label for="inputEmail3" class="col-sm-2 col-form-label">Nama Anda</label>
                 <div class="col-sm-10">
-                  <input type="text" class="form-control" name="nama" id="inputEmail3" placeholder="Input Your name">
+                  <input type="text" class="form-control" name="nama" id="inputEmail3" placeholder="Input Nama anda">
                 </div>
               </div>
               <div class="form-group row">
-                <label for="inputPassword3" class="col-sm-2 col-form-label">Agency</label>
+                <label for="inputPassword3" class="col-sm-2 col-form-label">Instansi</label>
                 <div class="col-sm-10">
-                  <input type="text" class="form-control" name="instansi" id="inputPassword3" placeholder="Input Your Agency">
+                  <input type="text" class="form-control" name="instansi" id="inputPassword3" placeholder="Input Instansi anda">
                 </div>
               </div>
               <fieldset class="form-group">

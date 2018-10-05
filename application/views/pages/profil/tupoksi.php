@@ -5,10 +5,10 @@
 
     <div class="row page-titles">
       <div class="col-md-5 col-8 align-self-center">
-        <h3 class="text-themecolor">Tupoksi</h3>
+        <h3 class="text-themecolor">Tugas Pokok Dan Fungsi</h3>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
-          <li class="breadcrumb-item active">Tupoksi</li>
+          <li class="breadcrumb-item active">Tugas Pokok Dan Fungsi</li>
         </ol>
       </div>
     </div>
@@ -45,7 +45,7 @@
                 <i class="ti-angle-right"></i>Pelaksanaan analisis dan evaluasi pengoperasian, pengawakan dan pemeliharaan Sarana Bantu Navigasi Pelayaran, Telekomunikasi Pelayaran, Kapal Negara Kenavigasian, Fasilitas Pangkalan, Bengkel, Pengamatan Laut, Survey Hidrografi, serta Pemantauan Alur dan Perlintasan.
               </li>
               <li>
-                <i class="ti-angle-right"></i>Pelaksanaan urusan keuangan, kepegawaian, ketatausahaan, kerumahtanggaan, hubungan masyarakat, pengumpulan dan pengolahan data, dokumentasi serta penyusunan laporan. 
+                <i class="ti-angle-right"></i>Pelaksanaan urusan keuangan, kepegawaian, ketatausahaan, kerumahtanggaan, hubungan masyarakat, pengumpulan dan pengolahan data, dokumentasi serta penyusunan laporan.
               </li>
           </div>
         </div>

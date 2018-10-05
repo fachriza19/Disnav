@@ -19,8 +19,7 @@
       <div class="col-12">
         <div class="card">
           <div class="card-body">
-            This is some text within a card block.
-          </div>
+            <img src="<?php echo base_url('assets/images/struktur-org.png'); ?>" width="101%" height="100%">    
         </div>
       </div>
     </div>

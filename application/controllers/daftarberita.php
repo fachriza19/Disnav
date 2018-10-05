@@ -15,4 +15,11 @@ if (! defined('BASEPATH') ) exit('No direct script access allowed');
             $this->load->view('pages/berita/list',$x);
             $this->load->view('templates/footer');
           }
+          function tampilanberita(){
+            $kode=$this->uri->segment(3);
+            $x['data']=$this->m_berita->get_berita_by_kode($kode);
+            $this->load->view('templates/header');
+            $this->load->view('pages/berita/tampilanberita',$x);
+            $this->load->view('templates/footer');
+          }
       }

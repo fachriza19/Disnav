@@ -18,7 +18,7 @@
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="d-block w-100" src="<?php echo base_url('assets/images/slide/indonesia.jpg') ?>" alt="First slide">
+      <img class="d-block w-100" src="<?php echo base_url('assets/images/wilker.png') ?>" alt="First slide">
     </div>
     <div class="carousel-item">
       <img class="d-block w-100" src="<?php echo base_url('assets/images/slide/kompas.jpg') ?>" alt="Second slide">

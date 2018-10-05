@@ -127,8 +127,6 @@
                                     </li>
                                     <li role="separator" class="divider"></li>
                                     <li><a href="#"><i class="ti-user"></i> My Profile</a></li>
-                                    <li><a href="#"><i class="ti-wallet"></i> My Balance</a></li>
-                                    <li><a href="#"><i class="ti-email"></i> Inbox</a></li>
                                     <li role="separator" class="divider"></li>
                                     <li><a href="#"><i class="ti-settings"></i> Account Setting</a></li>
                                     <li role="separator" class="divider"></li>
@@ -163,10 +161,10 @@
                         <li>
                         <li class="nav-small-cap">PERSONAL</li>
                             <li>
-                                <a class="" href="<?php echo base_url('daftarberita/index') ?>" aria-expanded="false"><i class="mdi mdi-gauge"></i><span class="hide-menu">berita </span></a>
+                                <a class="" href="<?php echo base_url('daftarberita/index') ?>" aria-expanded="false"><i class="mdi mdi-gauge"></i><span class="hide-menu">News</span></a>
                             </li>
                         <li>
-                            <a class="has-arrow " href="#" aria-expanded="false"><i class="mdi mdi-bullseye"></i><span class="hide-menu">Profil</span></a>
+                            <a class="has-arrow " href="#" aria-expanded="false"><i class="mdi mdi-bullseye"></i><span class="hide-menu">Profile</span></a>
                             <ul aria-expanded="false" class="collapse">
                                 <li><a href="<?php echo base_url('profil/index') ?>">Visi & misi</a></li>
                                 <li><a href="<?php echo base_url('profil/wilker') ?>">Wilayah Kerja</a></li>
@@ -185,7 +183,7 @@
                                       <li><a href="<?php echo base_url('sarpras/data') ?>">Data</a></li>
                                   </ul>
                                 </li>
-                                <li><a href="<?php echo base_url('sarpras/telkompel'); ?>">Telkompel</a></li>
+                                <li><a href="#">Telkompel</a></li>
                                 <li><a href="<?php echo base_url('sarpras/bengkel'); ?>">Bengkel</a></li>
                                 <li><a href="<?php echo base_url('sarpras/kapal'); ?>">Kapal Negara</a></li>
                                 <li><a href="<?php echo base_url('sarpras/pengamatan'); ?>">Pengamatan Laut</a></li>

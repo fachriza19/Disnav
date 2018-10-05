@@ -21,26 +21,48 @@
           <div class="card-body">
             <img src="<?php echo base_url('assets/images/logo-visi-misi.png'); ?>">
             <h4 class="card-title">VISI</h4>
-            <p class="text-justify">Terwujudnya Keselamatan Bernavigasi di Perairan Indonesia.</p><br />
+            <p class="text-justify">Terwujudnya kecukupan dan kehandalan sarana dan prasarana kenavigasian untuk meningkatkan keselamatan dan keamanan bernavigasi di perairan Indonesia.</p><br />
 
             <h4 class="card-title">MISI</h4>
             <ul class="list-icons">
               <li>
-                <i class="ti-angle-right"></i>Perwujudan ruang dan alur pelayaran yang aman dalam bernavigasi.
+                <i class="ti-angle-right"></i>Melaksanakan kegiatan pelayanan kenavigasian untuk meningkatkan keselamatan pelayaran.
               </li>
               <li>
-                <i class="ti-angle-right"></i>Perwujudan keandalan dan kecukupan sarana dan prasarana kenavigasian.
+                <i class="ti-angle-right"></i>Melaksanakan penyediaan sarana dan prasarana di bidang kenavigasian untuk mendukung keselamatan pelayaran.
               </li>
               <li>
-                <i class="ti-angle-right"></i>Perwujudan sumber daya manusia yang profesional.
-              </li>
-              <li>
-                <i class="ti-angle-right"></i>Dukungan teknologi yang tepat guna.
+                <i class="ti-angle-right"></i>Melaksanakan penyediaan SDM aparatur/teknis sesuai dengan kebutuhan Distrik Navigasi.
               </li>
             </ul><br />
 
-            <h4 class="card-title">ORIENTASI PELAYANAN DISTRIK NAVIGASI KELAS I TANJUNG PRIOK</h4>
-              <p class="text-justify">Mewujudkan perairan dan alur pelayaran yang aman, selamat, lancar bagi lalulintas pelayaran lokal, domestik, regional maupun internasional dengan memperhatikan aspek-aspek perlindungan lingkungan maritim, konektifitas, kepentingan strategis dan ekonomi serta program pemerintah pusat dan daerah.</p>  <br>
+            <h4 class="card-title">TUJUAN</h4>
+            <ul class="list-icons">
+              <li>
+                <i class="ti-angle-right"></i>Terwujudnya  kecukupan dan keandalan SBNP.
+              </li>
+              <li>
+                <i class="ti-angle-right"></i>Terwujudnya pelayanan Telekomunikasi Pelayaran yang Prima.
+              </li>
+              <li>
+                <i class="ti-angle-right"></i>Terwujudnya pemeliharaan kondisi sarana dan prasarana kenavigasian.
+              </li>
+              <li>
+                <i class="ti-angle-right"></i>Terwujudnya penyedian alur dan perlintasan yang aman bernavigasi.
+              </li>
+              <li>
+                <i class="ti-angle-right"></i>Terwujudnya keandalan operasional kapal kenavigasian.
+              </li>
+              <li>
+                <i class="ti-angle-right"></i>Terwujudnya dukungan fasilitas sarana dan prasarana pangkalan dan bengkel kenavigasian.
+              </li>
+              <li>
+                <i class="ti-angle-right"></i>Terwujudnya dukungan sarana penunjang operasional perkantoran.
+              </li>
+              <li>
+                <i class="ti-angle-right"></i>Terwujudnya kuantitas dan kualitas sumber daya manusia yang profesional.
+              </li>
+            </ul><br />
           </div>
         </div>
       </div>

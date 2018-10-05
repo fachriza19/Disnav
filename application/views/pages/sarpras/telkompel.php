@@ -25,21 +25,33 @@
             <form action="#" class="form-horizontal form-bordered">
               <div class="form-body">
                 <div class="form-group row">
-                  <label class="control-label text-left col-md-3">HARI</label>
+                  <label class="control-label text-left col-md-3">Hari</label>
                   <div class="col-md-3">
-                    <input type="text" class="form-control" placeholder="Hari">
+                    <input type="text" class="form-control">
+                  </div>
+                  <label class="control-label text-left col-md-1">s/d</label>
+                  <div class="col-md-3">
+                    <input type="text" class="form-control">
                   </div>
                 </div>
                 <div class="form-group row">
-                  <label class="control-label text-left col-md-3">TANGGAL</label>
+                  <label class="control-label text-left col-md-3">Tanggal</label>
                   <div class="col-md-3">
                     <input type="date" class="form-control" placeholder="dd/mm/yyyy">
                   </div>
+                  <label class="control-label text-left col-md-1">s/d</label>
+                  <div class="col-md-3">
+                    <input type="date" class="form-control">
+                  </div>
                 </div>
                 <div class="form-group row">
-                  <label class="control-label text-left col-md-3">WAKTU</label>
+                  <label class="control-label text-left col-md-3">Waktu</label>
                   <div class="col-md-3">
-                    <input type="text" class="form-control" placeholder="Jam">
+                    <input type="text" class="form-control">
+                  </div>
+                  <label class="control-label text-left col-md-1">s/d</label>
+                  <div class="col-md-3">
+                    <input type="text" class="form-control">
                   </div>
                 </div>
 
@@ -143,7 +155,7 @@
                   <div class="col-md-9">
                     <input type="text" class="form-control">
                   </div>
-                </div>          
+                </div>
 
                 <h5 class="card-title">IV. Jasa PNBP VTS/Telegram Radio</h5><br>
                 <div class="form-group row">
@@ -151,13 +163,13 @@
                   <div class="col-md-2">
                     <input type="text" class="form-control">
                   </div>
-                </div> 
+                </div>
                 <div class="form-group row">
                   <label class="control-label text-left col-md-3">Master Cable</label>
                   <div class="col-md-6">
                     <input type="text" class="form-control">
                   </div>
-                </div> 
+                </div>
 
                 <h5 class="card-title">V. Lain - lain</h5><br>
                 <div class="form-group row">

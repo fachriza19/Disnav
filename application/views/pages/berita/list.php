@@ -31,7 +31,7 @@
                       <div itemprop="text" class="entry-content">
                         <h2><?php echo $judul;?></h2><hr/>
                         <img src="<?php echo base_url().'assets/images/Upload/'.$image;?>" class="img-fluid">
-                        <?php echo limit_words($isi,30);?><br><a href="<?php echo base_url().'berita/tampilanberita/'.$id;?>"> Selengkapnya...</a>
+                        <?php echo limit_words($isi,30);?><br><a href="<?php echo base_url().'daftarberita/tampilanberita/'.$id;?>"> Selengkapnya...</a>
                       </div>
                     </div>
                   </div>
@@ -43,7 +43,7 @@
         <div class="card">
           <div class="card-body">
             <div class="col-12">
-              <form class="form-inline" action="<?php echo base_url('berita/cari')?>" action="GET">
+              <form class="form-inline" action="<?php echo base_url('adminmenu/cari')?>" action="GET">
                 <div class="form-group">
                 <input type="text" class="form-control" id="cari" name="cari" placeholder="cari">
                 </div>

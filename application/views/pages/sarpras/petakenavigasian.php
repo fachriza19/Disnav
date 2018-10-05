@@ -34,7 +34,7 @@
             function initialize() {
 
               var mapOptions = {
-                zoom: 7,  //zoom 17
+                zoom: 13,  //zoom 17
                 center: new google.maps.LatLng(-6.1194908, 106.8624483),
                 disableDefaultUI: true
               };
@@ -45,7 +45,7 @@
 
               var officeLocations = [
                 <?php
-                $data = file_get_contents('http://localhost/disnavv/Adminmenu/getdata');
+                $data = file_get_contents('http://localhost/Disnav/Adminmenu/getdata');
                 $no=1;
                 if(json_decode($data,true)){
                   $obj = json_decode($data);
