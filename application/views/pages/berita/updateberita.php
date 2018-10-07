@@ -22,7 +22,7 @@
             <div class="row">
               <div class="col-12">
                 <h2>Edit berita</h2><hr/>
-                <form action="<?php echo base_url('kelolaberita/edit_berita')?>" method="post" enctype="multipart/form-data">
+                <form action="<?php echo base_url('adminmenu/edit_berita')?>" method="post" enctype="multipart/form-data">
                   <input type="hidden" name="id_berita" value="<?php echo $bebas->berita_id ?>">
                   <input type="text" name="judul" value="<?php echo $bebas->berita_judul ?>" class="form-control" placeholder="Judul berita" required/><br/>
                   <textarea id="ckeditor" name="berita" class="form-control" required><?php echo $bebas->berita_isi ?></textarea><br/>

@@ -23,9 +23,10 @@
               <h4 class="card-title text-center">Map</h4>
             <div id="map" style="width:100%;height:380px;"></div>
 
-            <script src="https://maps.googleapis.com/maps/api/js?libraries=places&key="></script>
+            <!-- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key="></script>   API V3 -->
+            <script src="https://maps.googleapis.com/maps/api/js?libraries=places&key="></script>  <!-- API V2 -->
 
-<!-- AARTsJoe7L_kJ1kK-_nCE_l4PN3rHDHNNg&amp  API KEY-->
+            <!-- AARTsJoe7L_kJ1kK-_nCE_l4PN3rHDHNNg&amp  API KEY-->
 
 
 
@@ -34,9 +35,9 @@
             function initialize() {
 
               var mapOptions = {
-                zoom: 13,  //zoom 17
+                zoom: 6,  //zoom 17
                 center: new google.maps.LatLng(-6.1194908, 106.8624483),
-                disableDefaultUI: true
+                // disableDefaultUI: true
               };
 
               var mapElement = document.getElementById('map');
@@ -51,7 +52,7 @@
                   $obj = json_decode($data);
                   foreach($obj->results as $item){
                     ?>
-                    [<?php echo $item->id ?>,'<?php echo $item->nama ?>','<?php echo $item->kelompok ?>',<?php echo $item->latitude ?>,<?php echo $item->longtitude ?>],
+                    [<?php echo $item->id ?>,'<?php echo $item->nama ?>','<?php echo $item->kelompok ?>',<?php echo $item->latitude ?>,<?php echo $item->longtitude ?>,'<?php echo $item->penanggung_jawab ?>'],
                     <?php
                   }
                 }
@@ -74,9 +75,12 @@
                 '<div id="content">'+
                 '<div id="siteNotice">'+
                 '</div>'+
-                '<h5 id="firstHeading" align="center">'+ office[1] + '</h5>'+
-                '<div id="bodyContent">'+
-                '<a href=detail/?id='+office[0]+'>Info Detail</a>'+
+                '<h3 id="firstHeading" align="center">'+ office[1] + '</h3>'+
+                '<h6 id="firstHeading"> Kelompok : '+ office[2] + '</h6>'+
+                '<h6 id="firstHeading"> Koordinat : '+ office[3] + ' , '+ office[4] + '</h6>'+
+                '<h6 id="firstHeading"> Penanggung Jawab : '+ office[5] + ' </h6>'+
+                '<div id="bodyContent" align="center">'+
+                '<a href=<?php echo base_url('adminmenu/detailpeta/') ?>'+office[0]+'>Info Detail</a>'+
                 '</div>'+
                 '</div>';
 
@@ -111,6 +115,4 @@
 
 
 </div>
-</div>
-
 </div>

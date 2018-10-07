@@ -17,8 +17,9 @@ if (! defined('BASEPATH') ) exit('No direct script access allowed');
           }
           function Data()
           {
+            $data['data'] = $this->m_sarpras->ambildata()->result();
             $this->load->view('templates/header');
-            $this->load->view('pages/sarpras/data');
+            $this->load->view('pages/sarpras/data',$data);
             $this->load->view('templates/footer');
           }
 

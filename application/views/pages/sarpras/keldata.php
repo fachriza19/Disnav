@@ -16,236 +16,337 @@
 
 
 
-    <div class="row">
-      <div class="col-lg-12 align-self-center">
-        <div class="card">
-          <div class="card-body">
-            <div class="row">
-            <div class="col-lg-12">
-            <h2 class="card-title text-center">Data</h2>
 
-            <a href="#form" data-toggle="modal" class="btn btn-primary"><i class="fa fa-plus"></i> Tambah Data</a>
 
-            <table id="table1" class=" table table-bordered table-responsive nowrap table-hover" style="width: 100%;">
-              <thead>
-                <tr>
-                  <th class="all">ID</th>
-                  <th class="all" style="width: 500px;">NAMA</th>
-                  <th class="all">KELOMPOK</th>
-                  <th class="all" style="width: 250px;">LATITUDE</th>
-                  <th class="all" style="width: 250px;">LONGTITUDE</th>
-                  <th class="all">LOKASI</th>
-                  <th class="all">LUAS AREA</th>
-                  <th class="all">Nomor DSI</th>
-                  <th class="" style="width: 300px;">PENANGGUNG JAWAB :</th>
-                  <th class="all" style="width: 50;">AKSI</th>
-                  <th class="">JUMLAH SDM : </th>
-                  <th class="">WAKTU JAGA OPERASIONAL : </th>
-                  <th class="">PERANGKAT YANG TERPASANG : </th>
-                  <th class="">LAMPU : </th>
-                  <th class="">SOLAR CELL : </th>
-                  <th class="">BATTERY : </th>
-                </tr>
-              </thead>
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Kelola Sarana & Prasarana</h4>
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+          <li class="nav-item"> <a class="nav-link active" data-toggle="tab" href="#home" role="tab" aria-expanded="true"><span class="hidden-sm-up"><i class="ti-home"></i></span> <span class="hidden-xs-down">Data</span></a> </li>
+          <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#tabtambahdata" role="tab" aria-expanded="false"><span class="hidden-sm-up"><i class="ti-user"></i></span> <span class="hidden-xs-down">Tambah Data</span></a> </li>
+        </ul>
+        <!-- Tab panes -->
+        <div class="tab-content tabcontent-border">
+          <div class="tab-pane active" id="home" role="tabpanel" aria-expanded="true">
+            <div class="p-20">
 
-              <tbody id="target">
+              <div class="row">
+                <div class="col-lg-12">
+                  <h2 class="card-title text-center">Data</h2>
 
 
 
-                <!-- <script type="text/javascript">
-                getData();
-                function getData(){
-                  $.ajax({
-                    type:'POST',
-                    url:'<?php //echo base_url("adminmenu/ambildata") ?>',
-                    dataType:'json',
-                    success: function(data){
-                      // console.log(data)
-                      var baris='';
-                      for(var i=0;i<data.length;i++){
-                        baris += '<tr>'+
-                        '<td>'+ data[i].id +' </td>'+
-                        '<td>'+ data[i].nama +'  </td>'+
-                        '<td>'+ data[i].kelompok +'  </td>'+
-                        '<td>'+ data[i].latitude +'  </td>'+
-                        '<td>'+ data[i].longtitude +'  </td>'+
-                        '<td>'+ data[i].lokasi +'  </td>'+
+                  <table id="table1" class=" table table-bordered table-responsive nowrap table-hover" style="width: 100%;">
+                    <thead>
+                      <tr>
+                        <th class="all">ID</th>
+                        <th class="all" style="width: 250px;">NAMA</th>
+                        <th class="all">KELOMPOK</th>
+                        <th class="all" style="width: 250px;">LATITUDE</th>
+                        <th class="all" style="width: 250px;">LONGTITUDE</th>
+                        <th class="all">LOKASI</th>
+                        <th class="all">LUAS AREA</th>
+                        <th class="">Nomor DSI :</th>
+                        <th class="" style="width: 300px;">PENANGGUNG JAWAB :</th>
+                        <th class="all" style="width: 50;">AKSI</th>
+                        <th class="">JUMLAH SDM : </th>
+                        <th class="">WAKTU JAGA OPERASIONAL : </th>
+                        <th class="">PERANGKAT YANG TERPASANG : </th>
+                        <th class="">LAMPU : </th>
+                        <th class="">SOLAR CELL : </th>
+                        <th class="">BATTERY : </th>
+                      </tr>
+                    </thead>
 
-                        '<td>'+ data[i].luas_area +'  </td>'+
-                        '<td>'+ data[i].nomordsi +'  </td>'+
-                        '<td>'+ data[i].penanggung_jawab +'  </td>'+
-                        '<td>'+ data[i].jml_sdm +'  </td>'+
-                        '<td>'+ data[i].wktjagaopl +'  </td>'+
-                        '<td>'+ data[i].perangkat +'  </td>'+
-                        '<td>'+ data[i].lampu +'  </td>'+
-                        '<td>'+ data[i].solar_cell +'  </td>'+
-                        '<td>'+ data[i].battery +'  </td>'+
-                        '</tr>'
-                      }
-                      $('#target').html(baris);
-                    }
-                  });
-                }
-                </script> -->
-
-                <?php
-                  foreach ($data as $r){ ?>
-                <tr>
-                  <td><?= $r->id; ?></td>
-                  <td><?= $r->nama; ?></td>
-                  <td><?= $r->kelompok; ?></td>
-                  <td><?= $r->latitude; ?></td>
-                  <td><?= $r->longtitude; ?></td>
-                  <td><?= $r->lokasi; ?></td>
-                  <td><?= $r->luas_area; ?></td>
-                  <td><?= $r->nomordsi; ?></td>
-                  <td><?= $r->penanggung_jawab; ?></td>
-                  <td> <a href="#form" data-toggle="modal" class="btn btn-primary" onclick="submit<?php echo base_url('adminmenu/editdata/'.$r->id) ?>">Edit</a>
-                       <a href="#form" data-toggle="modal" class="btn btn-danger">Delete</a>
-                  </td>
-                  <td><?= $r->jml_sdm; ?></td>
-                  <td><?= $r->wktjagaopl; ?></td>
-                  <td><?= $r->perangkat; ?></td>
-                  <td><?= $r->lampu; ?></td>
-                  <td><?= $r->solar_cell; ?></td>
-                  <td><?= $r->battery; ?></td>
-                </tr>
-              <?php } ?>
-
-              </tbody>
-            </table>
-
-
-            <div class="modal fade" id="form" role="dialog">
-              <div class="modal-dialog">
-
-
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                    <h4 class="modal-title">Input data baru</h4>
-                  </div>
-                  <center><font color="red"><p id="pesan"></p> </center> </font>
-                  <div class="modal-body">
-
-                    <table>
-                    <form>
-                      <div class="form-group">
-                        <input type="text" name="nama" placeholder="Nama" class="form-control">
-                      </div>
-                      <div class="form-group">
-                        <input type="text" name="kelompok" placeholder="Kelompok" class="form-control">
-                      </div>
-                      <div class="form-group">
-                        <input type="text" name="latitude" placeholder="Latitude" class="form-control">
-                      </div>
-                      <div class="form-group">
-                        <input type="text" name="longtitude" placeholder="Longtitude" class="form-control">
-                      </div>
-                      <div class="form-group">
-                        <input type="text" name="lokasi" placeholder="Lokasi" class="form-control">
-                      </div>
-                      <div class="form-group">
-                        <input type="text" name="luasarea" placeholder="Luasarea" class="form-control">
-                      </div>
-                      <div class="form-group">
-                        <input type="text" name="nomordsi" placeholder="Nomor DSI" class="form-control">
-                      </div>
-                      <div class="form-group">
-                        <input type="text" name="penanggungjwb" placeholder="Penanggung Jawab" class="form-control">
-                      </div>
-                      <div class="form-group">
-                        <input type="text" name="jmlsdm" placeholder="Jumlah SDM" class="form-control">
-                      </div>
-                      <div class="form-group">
-                        <input type="text" name="wktjagaopl" placeholder="Waktu Jaga Operasional" class="form-control">
-                      </div>
-                      <div class="form-group">
-                        <input type="text" name="perangkat" placeholder="Perangkat yang terpasang" class="form-control">
-                      </div>
-                      <div class="form-group">
-                        <input type="text" name="lampu" placeholder="Lampu" class="form-control">
-                      </div>
-                      <div class="form-group">
-                        <input type="text" name="solarcell" placeholder="Solarcell" class="form-control">
-                      </div>
-                      <div class="form-group">
-                        <input type="text" name="battery" placeholder="Battery" class="form-control">
-                      </div>
-
-                    </form>
-                  </table>
-
-                  </div>
-                  <div class="modal-footer">
-                    <!-- <button type="modal-reset" class="btn waves-effect waves-light btn-outline-secondary">Reset</button> -->
-                    <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-danger waves-effect waves-light" onclick="tambahdata()" id="btn-tambah">Tambah</button>
-                  </div>
-
-
-                  <script type="text/javascript">
-
-
-                    function tambahdata(){
-                      var nama=$("[name='nama']").val();
-                      var kelompok=$("[name='kelompok']").val();
-                      var latitude=$("[name='latitude']").val();
-                      var longtitude=$("[name='longtitude']").val();
-                      var lokasi=$("[name='lokasi']").val();
-                      var luas_area=$("[name='luasarea']").val();
-                      var nomordsi=$("[name='nomordsi']").val();
-                      var penanggung_jawab=$("[name='penanggungjwb']").val();
-                      var jml_sdm=$("[name='jmlsdm']").val();
-                      var wktjagaopl=$("[name='wktjagaopl']").val();
-                      var perangkat=$("[name='perangkat']").val();
-                      var lampu=$("[name='lampu']").val();
-                      var solar_cell=$("[name='solarcell']").val();
-                      var battery=$("[name='battery']").val();
-
-                      $.ajax({
-                        type:'POST',
-                        data: 'nama='+nama+'&kelompok='+kelompok+'&latitude='+latitude+'&longtitude='+longtitude+'&lokasi='+lokasi+'&luas_area='+luas_area+'&nomordsi='+nomordsi+'&penanggung_jawab='+penanggung_jawab+'&jml_sdm='+jml_sdm+'&wktjagaopl='+wktjagaopl+'&perangkat='+perangkat+'&lampu='+lampu+'&solar_cell='+solar_cell+'&battery='+battery,
-                        url: '<?php echo base_url().'adminmenu/tambahdata' ?>',
-                        dataType: 'json',
-                        success: function(hasil){
-                          // console.log(hasil);
-                          $("#pesan").html(hasil.pesan);
-
-                          if (hasil.pesan=='') {
-                            $("#form").modal('hide');
-                            location.reload();
-                          }
-                        }
-                      });
-                    }
+                    <tbody id="target">
 
 
 
+            <?php
+            foreach ($data as $r){ ?>
+              <tr>
+                <td><?= $r->id; ?></td>
+                <td><?= $r->nama; ?></td>
+                <td><?= $r->kelompok; ?></td>
+                <td><?= $r->latitude; ?></td>
+                <td><?= $r->longtitude; ?></td>
+                <td><?= $r->lokasi; ?></td>
+                <td><?= $r->luas_area; ?></td>
+                <td><?= $r->nomordsi; ?></td>
+                <td><?= $r->penanggung_jawab; ?></td>
+                <td> <a href="#form" data-toggle="modal" class="btn btn-primary" data-toggle="modal" data-target="#modal_edit<?= $r->id  ?>">Edit</a>
+                  <a href="<?php echo base_url('adminmenu/hapusdata/'.$r->id) ?>" onclick="return confirm('Data Akan Dihapus');"class="btn btn-danger">Delete</a>
+                </td>
+                <td><?= $r->jml_sdm; ?></td>
+                <td><?= $r->wktjagaopl; ?></td>
+                <td><?= $r->perangkat; ?></td>
+                <td><?= $r->lampu; ?></td>
+                <td><?= $r->solar_cell; ?></td>
+                <td><?= $r->battery; ?></td>
+              </tr>
+            <?php } ?>
 
-                  </script>
+          </tbody>
+        </table>
 
-
-
-
-
-
-                </div>
-
-
-              </div>
-
-             </div> <!-- end modal -->
-
-          </div>
-          </div>
-
-          </div>
-        </div>
       </div>
-    </div>
-
+    </div> <!-- END DIV CLASS ROW -->
 
 
   </div>
 </div>
+<div class="tab-pane p-20" id="tabtambahdata" role="tabpanel" aria-expanded="false">
+
+<form action="<?php echo base_url('adminmenu/tambahdata'); ?>" method="post">
+
+
+  <div class="form-group row">
+    <label for="inputnama" class="col-2 col-form-label">Nama</label>
+    <div class="col-10">
+      <input class="form-control" type="text" placeholder="Contoh : Pelampung Suar Bantu " name="nama" id="inputnama"required>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-2 col-form-label">Kelompok</label>
+    <div class="col-10">
+      <input class="form-control" type="text" placeholder="Contoh : Pelampung Suar" name="kelompok" required>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-2 col-form-label">Latitude</label>
+    <div class="col-10">
+      <input class="form-control" type="text" placeholder="Contoh : -6.1194908" name="latitude" required>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-2 col-form-label">Longtitude</label>
+    <div class="col-10">
+      <input class="form-control" type="text" placeholder="Contoh : 106.8624483" name="longtitude" required>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-2 col-form-label">Lokasi</label>
+    <div class="col-10">
+      <input class="form-control" type="text" placeholder="Contoh : Jakarta" name="lokasi" required>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-2 col-form-label">Luas Area</label>
+    <div class="col-10">
+      <input class="form-control" type="text" placeholder="Contoh : 1 Hektar" name="luasarea" required>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-2 col-form-label">Nomor DSI</label>
+    <div class="col-10">
+      <input class="form-control" type="text" placeholder="Contoh : 123456" name="nomordsi" required>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-2 col-form-label">Penanggung Jawab</label>
+    <div class="col-10">
+      <input class="form-control" type="text" placeholder="Contoh : Bapak Adit" name="penanggungjwb" required>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-2 col-form-label">Jumlah SDM</label>
+    <div class="col-10">
+      <input class="form-control" type="text" placeholder="Contoh : 10 Pegawai" name="jmlsdm">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-2 col-form-label">Waktu Jaga Operasional</label>
+    <div class="col-10">
+      <input class="form-control" type="text" placeholder="Contoh : 8 Jam" name="wktjagaopl">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-2 col-form-label">Perangkat Yang Terpasang</label>
+    <div class="col-10">
+      <input class="form-control" type="text" placeholder="Contoh : " name="perangkat" required>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-2 col-form-label">Jenis Lampu</label>
+    <div class="col-10">
+      <input class="form-control" type="text" placeholder="Contoh : Philips" name="lampu" required>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-2 col-form-label">Solar Cell</label>
+    <div class="col-10">
+      <input class="form-control" type="text" placeholder="Contoh : " name="solarcell" required>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-2 col-form-label">Battery</label>
+    <div class="col-10">
+      <input class="form-control" type="text" placeholder="Contoh : ABC " name="battery" required>
+    </div>
+  </div>
+
+  <div class="form-group row button-group">
+    <div class="col-md-12">
+      <button type="submit" class="btn btn-danger waves-effect waves-light pull-right" >Tambah</button>
+    <button type="reset" class="btn btn-default waves-effect pull-right">Reset</button>
+  </div>
+  </div>
+
+
+</form>
+ </div> <!-- END TAB PANE TAMBAH DATA -->
+
+
+</div>  <!-- END TAB CONTENT -->
+</div> <!-- END CARD BODY -->
+</div> <!-- END CARD -->
+
+</div><!-- END CONTAINER FLUID -->
+</div> <!-- END PAGE WRAPPER -->
+
+
+                                    <!-- ===== MODAL EDIT DATA ===== -->
+              <?php
+               foreach($data as $i):
+              //     $dataid=$i['id'];
+              //     $datanama=$i['nama'];
+              //     $datakelompok=$i['kelompok'];
+              //     $datalatitude=$i['latitude'];
+              //     $datalongtitude=$i['longtitude'];
+              //     $datalokasi=$i['lokasi'];
+              //     $dataluas_area=$i['luas_area'];
+              //     $datanomordsi=$i['nomordsi'];
+              //     $datapenanggung_jawab=$i['penanggung_jawab'];
+              //     $datajml_sdm=$i['jml_sdm'];
+              //     $datawktjagaopl=$i['wktjagaopl'];
+              //     $dataperangkat=$i['perangkat'];
+              //     $datalampu=$i['lampu'];
+              //     $datasolar_cell=$i['solar_cell'];
+              //     $databattery=$i['battery'];
+               ?>
+               <div class="modal fade" id="modal_edit<?php echo $i->id;?>" tabindex="-1" role="dialog" aria-labelledby="largeModal" aria-hidden="true">
+                 <div class="modal-dialog modal-lg">
+                   <div class="modal-content">
+                     <div class="modal-header">
+                       <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+                       <h3 class="modal-title" id="myModalLabel">Edit Data</h3>
+                     </div>
+
+                     <form class="form-horizontal" method="post" action="<?php echo base_url().'adminmenu/modal_edit'?>">
+                                     <div class="modal-body">
+                                       <div class="row">
+                                         <div class="form-group col-md-6">
+                                             <label class="control-label col-xs-3" >Nama</label>
+                                             <div class="col-xs-8">
+                                               <input type="" name="idmodal" value="<?= $i->id; ?>">
+                                                 <input name="nama" value="<?php echo $i->nama;?>" class="form-control" type="text" placeholder="Nama..." required>
+                                             </div>
+                                         </div>
+                                         <div class="form-group col-md-6">
+                                             <label class="control-label col-xs-3" >Kelompok</label>
+                                             <div class="col-xs-8">
+                                                 <input name="kelompok" value="<?php echo $i->kelompok;?>" class="form-control" type="text" placeholder="Kelompok..." required>
+                                             </div>
+                                         </div>
+                                       </div>
+
+                                       <div class="row">
+                                         <div class="form-group col-md-6">
+                                             <label class="control-label col-xs-3" >Latitude</label>
+                                             <div class="col-xs-8">
+                                                 <input name="latitude" value="<?php echo $i->latitude;?>" class="form-control" type="text" placeholder="Latitude..." required>
+                                             </div>
+                                         </div>
+                                         <div class="form-group col-md-6">
+                                             <label class="control-label col-xs-3" >Longtitude</label>
+                                             <div class="col-xs-8">
+                                                 <input name="longtitude" value="<?php echo $i->longtitude;?>" class="form-control" type="text" placeholder="Longtitude..." required>
+                                             </div>
+                                         </div>
+                                       </div>
+
+                                       <div class="row">
+                                         <div class="form-group col-md-6">
+                                             <label class="control-label col-xs-3" >Lokasi</label>
+                                             <div class="col-xs-8">
+                                                 <input name="lokasi" value="<?php echo $i->lokasi;?>" class="form-control" type="text" placeholder="Lokasi..." required>
+                                             </div>
+                                         </div>
+                                         <div class="form-group col-md-6">
+                                             <label class="control-label col-xs-3" >Luas Area</label>
+                                             <div class="col-xs-8">
+                                                 <input name="luasarea" value="<?php echo $i->luas_area;?>" class="form-control" type="text" placeholder="Luas Area..." required>
+                                             </div>
+                                         </div>
+                                         </div>
+                                         <div class="row">
+                                         <div class="form-group col-md-6">
+                                             <label class="control-label col-xs-3" >Nomor DSI</label>
+                                             <div class="col-xs-8">
+                                                 <input name="nomordsi" value="<?php echo $i->nomordsi;?>" class="form-control" type="text" placeholder="Nomor DSI..." required>
+                                             </div>
+                                         </div>
+                                         <div class="form-group col-md-6">
+                                             <label class="control-label col-xs-3" >Penanggung Jawab</label>
+                                             <div class="col-xs-8">
+                                                 <input name="penanggungjwb" value="<?php echo $i->penanggung_jawab;?>" class="form-control" type="text" placeholder="Penanggung Jawab..." required>
+                                             </div>
+                                         </div>
+                                         </div>
+
+                                          <div class="row">
+                                         <div class="form-group col-md-6">
+                                             <label class="control-label col-xs-3" >Jumlah SDM</label>
+                                             <div class="col-xs-8">
+                                                 <input name="jumlahsdm" value="<?php echo $i->jml_sdm;?>" class="form-control" type="text" placeholder="Jumlah SDM..." required>
+                                             </div>
+                                         </div>
+                                         <div class="form-group col-md-6">
+                                             <label class="control-label col-xs-3" >Waktu Jaga Operasional</label>
+                                             <div class="col-xs-8">
+                                                 <input name="wktjagaopl" value="<?php echo $i->wktjagaopl;?>" class="form-control" type="text" placeholder="Waktu Jaga Operasional..." required>
+                                             </div>
+                                         </div>
+                                         </div>
+                                         <div class="row">
+                                         <div class="form-group col-md-6">
+                                             <label class="control-label col-xs-3" >Perangkat</label>
+                                             <div class="col-xs-8">
+                                                 <input name="perangkat" value="<?php echo $i->perangkat;?>" class="form-control" type="text" placeholder="Perangkat..." required>
+                                             </div>
+                                         </div>
+                                         <div class="form-group col-md-6">
+                                             <label class="control-label col-xs-3" >Lampu</label>
+                                             <div class="col-xs-8">
+                                                 <input name="lampu" value="<?php echo $i->lampu;?>" class="form-control" type="text" placeholder="Lmapu..." required>
+                                             </div>
+                                         </div>
+                                         </div>
+                                         <div class="row">
+                                         <div class="form-group col-md-6">
+                                             <label class="control-label col-xs-3" >Solar Cell</label>
+                                             <div class="col-xs-8">
+                                                 <input name="solarcell" value="<?php echo $i->solar_cell;?>" class="form-control" type="text" placeholder="Solar Cell..." required>
+                                             </div>
+                                         </div>
+                                         <div class="form-group col-md-6">
+                                             <label class="control-label col-xs-3" >Battery</label>
+                                             <div class="col-xs-8">
+                                                 <input name="battery" value="<?php echo $i->battery;?>" class="form-control" type="text" placeholder="Battery..." required>
+                                             </div>
+                                         </div>
+                                         </div>
+
+                                         <div class="modal-footer">
+                                           <button type="button" class="btn btn-danger waves-effect text-left" data-dismiss="modal">Close</button>
+                                           <input type="submit" name="" class="btn btn-primary pull-right" value="Update Data">
+                                         </div>
+
+
+                   </div>
+                 </div>
+               </div>
+               </div>
+             <?php endforeach;?>
+                 <!--END MODAL EDIT DATA-->
